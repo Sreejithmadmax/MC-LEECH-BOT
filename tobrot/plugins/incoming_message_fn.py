@@ -54,7 +54,7 @@ async def incoming_message_f(client, message):
     user_command = message.command[0]
     g_id = message.from_user.id
     # get link from the incoming message
-    i_m_sefg = await message.reply_text("Processing...", quote=True)
+    i_m_sefg = await message.reply_text("Processing...Your Link🤧", quote=True)
     rep_mess = message.reply_to_message
     is_file = False
     dl_url = ''
@@ -79,7 +79,7 @@ async def incoming_message_f(client, message):
         LOGGER.info(dl_url)
 
     else:
-        await i_m_sefg.edit("<b>Hey Dude !</b>\n\n 🐈 <code>Reply with Direct /Torrent Link</code>")
+        await i_m_sefg.edit("<b>Hey Dude !</b>\n\n 🙄 <code>Reply with Direct /Torrent Link</code>")
         return
     if dl_url is not None:
 
@@ -93,7 +93,11 @@ async def incoming_message_f(client, message):
             os.makedirs(new_download_location)
         aria_i_p = ''
         if not is_file:
-            await i_m_sefg.edit_text("Extracting links...")
+            await i_m_sefg.edit_text("Download Starts✌️...")
+            # try to download the "link"
+        is_zip = False
+        is_cloud = False
+        is_unzip = False
             # start the aria2c daemon
             aria_i_p = await aria_start()
             # LOGGER.info(aria_i_p)
