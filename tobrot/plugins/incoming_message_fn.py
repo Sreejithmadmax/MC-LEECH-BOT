@@ -94,10 +94,6 @@ async def incoming_message_f(client, message):
         aria_i_p = ''
         if not is_file:
             await i_m_sefg.edit_text("Download Starts✌️...")
-            # try to download the "link"
-        is_zip = False
-        is_cloud = False
-        is_unzip = False
             # start the aria2c daemon
             aria_i_p = await aria_start()
             # LOGGER.info(aria_i_p)
