@@ -1,9 +1,9 @@
-aiohttp
+aiohttp==3.7.4
 aria2p==0.9.1
 hachoir
 Pillow
-pyrogram
-tgcrypto
+pyrogram==1.2.9
+tgcrypto==1.2.3
 youtube_dl
 hurry.filesize
 python-dotenv
